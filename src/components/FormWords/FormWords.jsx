@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import POST from '../../redux/POST';
-import { POST_ACTION } from '../../redux/action.js';
+import { POST_ACTION } from '../../redux/action';
 
 import { motion } from 'framer-motion';
 
