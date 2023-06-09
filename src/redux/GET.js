@@ -1,9 +1,13 @@
 class GET {
     static async getWords() {
         try {
-            const r = await fetch('https://itgirlschool.justmakeit.ru/api/test/');
-            console.log(r);
-            const data = await r.json();
+            const response = await fetch('https://itgirlschool.justmakeit.ru/api/test/');
+            if (response.ok) {
+                console.log('URL is reachable.');
+            } else {
+                console.log('URL is not reachable.');
+            }
+            const data = await response.json();
             return data;
         } catch (e) {
             console.error(e);
